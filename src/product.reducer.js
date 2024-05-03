@@ -1,6 +1,9 @@
-function productReducer(state,action){
+const intialstate = {
+    cart:[]
+}
+function productReducer(state=intialstate,action){
     if(action.type==='addtocart'){
-        return {...state,item:[...state.item,action.payload]}
+        return {...state,cart:[...state.cart,action.payload]}
     }
     return state
 }
