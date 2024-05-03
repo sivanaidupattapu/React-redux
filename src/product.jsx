@@ -21,15 +21,15 @@ function Product(props) {
                 item?.map((p, i) => {
                     return <div key={i} className='w-25 p-2 text-center border border border-danger'>
                         <img src={p.image} width='150px' alt="" />
-                            <p>Brand : {p.brand}</p>
-                            <p>Model : {p.model}</p>
-                            <p>Category : {p.category}</p>
-                            <p>Price : {p.price}.00</p>
-                        <button className='btn btn-warning mb-2' onClick={()=>{props.dispatch({type:'addtocart',payload:p})}}>Add to Cart</button>
+                        <p>Brand : {p.brand}</p>
+                        <p>Model : {p.model}</p>
+                        <p>Category : {p.category}</p>
+                        <p>Price : {p.price}.00</p>
+                        <button className='btn btn-warning mb-2' onClick={() => { props.dispatch({ type: 'addtocart', payload: p }) }}>Add to Cart</button>
                     </div>
                 })
             }
         </div>
     </div>
 }
-export default connect(store=>store)(Product)
+export default connect(store => store)(Product)
