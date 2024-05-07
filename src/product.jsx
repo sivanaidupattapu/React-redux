@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 function Product(props) {
-    console.log('props :',props)
+    console.log('props :', props)
     var [item, setItem] = useState()
     useEffect(() => {
         fetch('https://fakestoreapi.in/api/products')
@@ -27,7 +27,6 @@ function Product(props) {
             </div>
             <div>
                 <h2>Cart : {props.productReducer.cart.length}</h2>
-
             </div>
         </div>
         <div className='d-flex flex-wrap m-2 '>
