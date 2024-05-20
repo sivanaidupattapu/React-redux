@@ -20,7 +20,7 @@ function Product(props) {
         setItem([...item])
         props.dispatch({ type: 'addtocart', payload: p })
     }
-    return <div>
+    return <div className="border border-2 border-success p-2">
         <div className='d-flex justify-content-between'>
             <div>
                 <h2 className='text-info-emphasis'>Products</h2>
